@@ -1,0 +1,2 @@
+#!/bin/bash
+curl  http://localhost:8081/request-registration -X POST -H "Content-Type: application/json" -d'{"email":"jenny1@example.com"}'

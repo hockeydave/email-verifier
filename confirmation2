@@ -1,0 +1,11 @@
+#!/bin/bash
+if  [ -z "$1" ]
+then
+	echo "You must pass in a confirmationCode $1"
+	exit
+else
+echo "{\"email\":\"george2@example.com\", \"confirmationCode\":\"$1\"}"
+p="{\"email\":\"george2@example.com\", \"confirmationCode\":\"$1\"}"
+fi
+#curl   http://localhost:8082/register -X POST -H "Content-Type: application/json" -d'{"email":"george2@example.com", "confirmationCode":"$1"}'
+curl   http://localhost:8082/register -X POST -H "Content-Type: application/json" -d"{\"email\":\"george2@example.com\", \"confirmationCode\":\"$1\"}"
